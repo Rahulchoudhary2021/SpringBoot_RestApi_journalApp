@@ -44,7 +44,7 @@ public class ProductController {
 	@PostMapping()
 	// @ResponseStatus(HttpStatus.CREATED)
 	public ResponseEntity<ProductResponseDTO> addProduct(@Valid @RequestBody ProductRequestDTO productdto) {
-		logger.info("<--Receive Product Request-->");
+		logger.info("<--Receive Product Request ***-->");
 		ProductResponseDTO added = service.addProduct(productdto);
 		return ResponseEntity.status(HttpStatus.CREATED).body(added);
 
